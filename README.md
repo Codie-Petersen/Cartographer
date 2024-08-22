@@ -39,6 +39,8 @@ Run the script from the command line:
 python cartographer.py
 ```
 
+Make sure that you adjust the window size to fit the starfield properly in the terminal.
+
 ## License
 
 This project is released under the Unlicense. For more information, please refer to <http://unlicense.org/>.

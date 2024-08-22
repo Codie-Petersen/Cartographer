@@ -142,7 +142,7 @@ class StarFieldSimulator:
     def __init__(self, width, height, num_stars, fov, field_size=30):
         self.star_field = StarField(num_stars, width, height, fov, field_size)
         self.angle_x = self.angle_y = self.angle_z = 0
-        self.player = Player(0, 0, 0)  # Start the player in front of the star field
+        self.player = Player(0, 0, 0)  # Start the player in center of the star field
         self.width = width
         self.height = height
         self.fov = fov
@@ -229,6 +229,9 @@ class StarFieldSimulator:
         print(f"Nearest Star (Distance: {distance:.2f}): {nearest_star.get_info()}")
 
     def run(self):
+        #First update.
+        self.update()
+        self.render()
         while True:
             update = self.handle_input()
             if update:
